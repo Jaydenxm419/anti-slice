@@ -120,11 +120,11 @@ export default function SessionManagement({ sessions, addSession, updateSession 
         </Box>
         <Button
           variant="contained"
-          startIcon={<AddCircleOutlineIcon />}
           onClick={openNew}
-          size="medium"
+          size="small"
+          sx={{ minWidth: 0, px: 1.5, py: 1, borderRadius: 3, flexShrink: 0 }}
         >
-          New Session
+          <AddCircleOutlineIcon sx={{ fontSize: 22 }} />
         </Button>
       </Stack>
 
