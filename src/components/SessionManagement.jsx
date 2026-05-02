@@ -112,7 +112,7 @@ export default function SessionManagement({ sessions, addSession, updateSession 
   return (
     <Box sx={{ pb: 2 }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 2 }}>
-        <Box>
+        <Box sx={{ minWidth: 0, flex: 1 }}>
           <Typography variant="h5">Today's Range</Typography>
           <Typography variant="body2" color="text.secondary">
             {new Date().toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' })}
@@ -120,11 +120,12 @@ export default function SessionManagement({ sessions, addSession, updateSession 
         </Box>
         <Button
           variant="contained"
+          startIcon={<AddCircleOutlineIcon />}
           onClick={openNew}
           size="small"
-          sx={{ minWidth: 0, px: 1.5, py: 1, borderRadius: 3, flexShrink: 0 }}
+          sx={{ flexShrink: 0, ml: 1, whiteSpace: 'nowrap' }}
         >
-          <AddCircleOutlineIcon sx={{ fontSize: 22 }} />
+          New Session
         </Button>
       </Stack>
 
